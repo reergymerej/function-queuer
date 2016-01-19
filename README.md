@@ -49,13 +49,10 @@ var app = {
         // ----- MAKE A RESERVATION -----
         var reservation = this.print.reserve();
 
-        return new Promise(function (resolve) {
-            setTimeout(function () {
-                // ----- USE THE RESERVATION -----
-                reservation.use('called from a');
-                resolve();
-            }, 3000);
-        });
+        setTimeout(function () {
+            // ----- USE THE RESERVATION -----
+            reservation.use('called from a');
+        }, 3000);
     },
 
     b: function () {
