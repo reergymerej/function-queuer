@@ -42,19 +42,19 @@ app.b();
 
 ## Solution
 
-Use Function Queuer to make `print` take reservations.  Calls to print will be handled in the order of reservations made.  If no reservation was made, they'll have to wait in line for those who called ahead.
+Use Function Queuer to make `print` take reservations.  Calls to `print` will be handled in the order of reservations made.  If no reservation was made, they'll have to wait in line for those who called ahead.
 
 ```js
 var functionQueuer = require('functionQueuer');
 
 var app = {
     a: function () {
-        // MAKE A RESERVATION
+        // ----- MAKE A RESERVATION -----
         var reservation = this.print.reserve();
 
         return new Promise(function (resolve) {
             setTimeout(function () {
-                // USE THE RESERVATION
+                // ----- USE THE RESERVATION -----
                 reservation.use('called from a');
                 resolve();
             }, 3000);
@@ -70,7 +70,7 @@ var app = {
     },
 };
 
-// WRAP app.print SO IT STARTS HANDLING RESERVATIONS
+// ----- WRAP app.print SO IT STARTS HANDLING RESERVATIONS -----
 functionQueuer.wrap({
     scope: app,
     name: 'print',
