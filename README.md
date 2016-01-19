@@ -8,7 +8,7 @@ This wraps a function so that anything that calls it waits for reservations to f
 
 `b` calls `print` immediately.
 
-`a` is executed, immediately followed by `b`.  The result is `print` is called by `b`, then `a` 3 seconds later.
+`a` is executed, immediately followed by `b`.  The result is `print` is called by `b`, then `a` 3 seconds later, but we want `b` to wait until `a` has had its turn.
 
 ```js
 var app = {
