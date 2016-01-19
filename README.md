@@ -86,8 +86,7 @@ app.b();
 
 ## Installation
 
-1. clone repo
-2. npm install
+1. clone repo (npm module forthcoming)
 
 ## Usage
 
