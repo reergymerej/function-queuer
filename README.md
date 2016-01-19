@@ -15,12 +15,9 @@ var app = {
     a: function () {
         var me = this;
 
-        return new Promise(function (resolve) {
-            setTimeout(function () {
-                me.print('called from a');
-                resolve();
-            }, 3000);
-        });
+        setTimeout(function () {
+            me.print('called from a');
+        }, 3000);
     },
 
     b: function () {
