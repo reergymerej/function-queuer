@@ -1,0 +1,19 @@
+{
+  "name": "function-queuer",
+  "version": "1.0.0",
+  "description": "This wraps a function so that anything that calls it waits for reservations to finish before executing.",
+  "main": "functionQueuer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reergymerej/function-queuer.git"
+  },
+  "author": "Jeremy Greer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reergymerej/function-queuer/issues"
+  },
+  "homepage": "https://github.com/reergymerej/function-queuer#readme"
+}
