@@ -49,10 +49,12 @@ var functionQueuer = require('functionQueuer');
 
 var app = {
     a: function () {
+        // MAKE A RESERVATION
         var reservation = this.print.reserve();
 
         return new Promise(function (resolve) {
             setTimeout(function () {
+                // USE THE RESERVATION
                 reservation.use('called from a');
                 resolve();
             }, 3000);
@@ -68,6 +70,7 @@ var app = {
     },
 };
 
+// WRAP app.print SO IT STARTS HANDLING RESERVATIONS
 functionQueuer.wrap({
     scope: app,
     name: 'print',
@@ -80,6 +83,15 @@ app.b();
 // called from a (after 3 seconds)
 // called from b
 ```
+
+## Installation
+
+1. clone repo
+2. npm install
+
+## Usage
+
+Use functionQueuer.es6 or functionQueuer.js (es5), your choice.
 
 ## API
 
